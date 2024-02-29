@@ -1,0 +1,11 @@
+
+<section>
+    <h1>La boutique</h1>
+<ul>
+    @for(article of articles; track article.name) {
+        <li><app-article [article]="article"></app-article></li>
+    } @empty{
+        <span>aucun article</span>
+    }
+</ul>
+</section>
