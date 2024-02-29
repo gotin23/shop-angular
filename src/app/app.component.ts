@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FinalPageComponent } from './final-page/final-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, HomePageComponent, FinalPageComponent],
 })
 export class AppComponent {
-  title = 'shop-angular';
+  title = 'wizishop';
 }
