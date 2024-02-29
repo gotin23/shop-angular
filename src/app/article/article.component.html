@@ -1,0 +1,16 @@
+<article>
+    <div class="img-container">
+        <img [src]="article.image" alt="article.name">
+    </div>
+    <div class="detail">
+        <h3>{{article.name}}</h3>
+        <div class="price-container">
+            <button type="button" class="secondary-btn" (click)="displayModal()">Voir détails</button>
+            <p class="price">{{article.price}} €</p>  
+        </div>
+    </div>
+    <p class="description">{{article.description}}</p>
+    <button type="button" (click)="addToCart(article)" class="primary-btn">Ajouter au panier</button>
+    <app-modal  [article]="article" [(visible)]="showModal">
+    </app-modal>
+</article>
