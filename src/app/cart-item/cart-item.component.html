@@ -1,20 +1,22 @@
 <div class="cart-item">
-    <img [src]="item.image" alt="item.name">
-    <h3 class="title">{{item.name}}</h3>
-    <div class="item-quantity">
-        <button type="button" (click)="removeFromCart(item)" class="less-btn">
-            <p>-</p>
-        </button>
-        <p>{{item.quantity}}</p>
-        <button type="button" (click)="addToCart(item)">
-            <p>+</p>
-        </button>
-        <button type="button" class="delete-btn">
-            <img src="assets/icons/trash.svg" alt="icone corbeille"  (click)="deleteFromCart(item)" class="trash-icon">
-        </button>
-        
-    </div>
-    <p class="price">{{item.price}} €</p>
-   
-   
+  <img [src]="item.image" alt="item.name" />
+  <h3 class="title">{{ item.name }}</h3>
+  <div class="item-quantity">
+    <button type="button" (click)="removeFromCart(item)" class="less-btn">
+      <p>-</p>
+    </button>
+    <p>{{ item.quantity }}</p>
+    <button type="button" (click)="addToCart(item)">
+      <p>+</p>
+    </button>
+    <button type="button" class="delete-btn">
+      <img
+        src="assets/icons/trash.svg"
+        alt="icone corbeille"
+        (click)="deleteFromCart(item)"
+        class="trash-icon"
+      />
+    </button>
+  </div>
+  <p class="price">{{ item.price }} €</p>
 </div>

@@ -11,9 +11,6 @@ import { CartService } from '../services/cart.service';
 })
 export class CartItemComponent {
   @Input() item!: CartItem;
-  ngOnInit() {
-    console.log(this.item, 'icicici');
-  }
   constructor(private cartService: CartService) {}
   addToCart(item: CartItem) {
     this.cartService.increaseCartItem(item);

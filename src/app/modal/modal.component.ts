@@ -12,7 +12,6 @@ import { CartService } from '../services/cart.service';
 })
 export class ModalComponent {
   @Input() article!: Article;
-
   @Input() visible!: boolean;
   @Output() visibleChange = new EventEmitter<boolean>();
   constructor(private cartService: CartService) {}

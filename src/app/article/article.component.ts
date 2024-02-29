@@ -15,7 +15,6 @@ export class ArticleComponent {
   @Input() article!: Article;
   showModal: boolean = false;
   displayModal: () => void = () => {
-    console.log('showModal');
     this.showModal = true;
   };
   constructor(private cartService: CartService) {}

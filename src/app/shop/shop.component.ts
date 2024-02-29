@@ -14,15 +14,8 @@ export class ShopComponent {
   title: string = 'hello world';
   counter: number = 0;
   articles: Array<Article> = [];
-  // constructor(private cartService: CartService) {}
 
   ngOnInit() {
     this.articles = data;
   }
-
-  // getTotal() {
-  //   return this.cartService.cart.reduce((sum, value) => {
-  //     return sum + value.price * value.quantity;
-  //   }, 0);
-  // }
 }

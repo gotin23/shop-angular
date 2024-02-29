@@ -33,6 +33,7 @@ export class CartService {
       }
     }
   }
+
   deleteFromCart(article: Article | CartItem) {
     let itemIndex = this.cart.findIndex((item) => item.id === article.id);
     this.cart.splice(itemIndex, 1);

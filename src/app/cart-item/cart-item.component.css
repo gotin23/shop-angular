@@ -1,24 +1,19 @@
 .cart-item {
   width: 100%;
   display: flex;
-
   align-items: center;
   justify-content: space-between;
   height: 100px;
-
   border-bottom: 1px solid rgba(97, 79, 238, 0.13);
-
   position: relative;
 }
 .title {
   font-size: 18px;
   width: 60px;
 }
-
 img {
   width: 80px;
 }
-
 .item-quantity {
   display: flex;
   justify-content: flex-start;
