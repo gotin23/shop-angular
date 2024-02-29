@@ -1,0 +1,35 @@
+<section>
+  <div class="title-container" [class.open]="cartOpen">
+    <h2>Mon Panier</h2>
+    <img
+      *ngIf="cartOpen"
+      src="../../assets/icons/close-icon.png"
+      alt="icone de fermeture"
+      (click)="toggleCart()"
+    />
+    <img
+      *ngIf="!cartOpen"
+      src="../../assets/icons/cart-icon.png"
+      alt="icone de panier"
+      (click)="toggleCart()"
+    />
+  </div>
+  <div class="cart-container" [class.open]="cartOpen">
+    <ul>
+      @for(item of items; track item.id) {
+      <li><app-cart-item [item]="item"></app-cart-item></li>
+      } @empty{
+      <span>aucun article</span>
+      }
+    </ul>
+    <div class="total-container">
+      <button type="button" class="primary-btn" routerLink="/final">
+        Payer
+      </button>
+      <p>Total: {{ total }}€</p>
+    </div>
+    <div class="clear-cart-btn-container">
+      <button type="button" (click)="clearCart()">Supprimer le panier</button>
+    </div>
+  </div>
+</section>
