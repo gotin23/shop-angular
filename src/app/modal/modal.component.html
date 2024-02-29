@@ -1,18 +1,25 @@
-<section *ngIf="visible" >
-    <article>
-        <button type="button" class="close-btn" (click)="visibleChange.emit(false)">X</button>
-        <div class="title-container">
-            <h3>{{article.name}}</h3>
-            <p>Prix: {{article.price}}€</p>
-        </div>   
-        <div class="detail-container">         
-        <img [src]="article.image" alt="article.name">  
-            <p class="description">{{article.description}}</p>
+<section *ngIf="visible">
+  <article>
+    <img
+      src="assets/icons/close-icon.png"
+      alt="icone de fermeture"
+      (click)="visibleChange.emit(false)"
+      class="close-btn"
+    />
+    <div class="title-container">
+      <h2>{{ article.name }}</h2>
+      <p>
+        Prix: <b>{{ article.price }}€</b>
+      </p>
+    </div>
+    <div class="detail-container">
+      <img [src]="article.image" alt="article.name" />
+      <p class="description">{{ article.description }}</p>
     </div>
     <div class="btn-container">
-        <button type="button" class="primary-btn " (click)="addToCart(article)">
-            Ajouter au panier
-        </button>
+      <button type="button" class="primary-btn" (click)="addToCart(article)">
+        Ajouter au panier
+      </button>
     </div>
-    </article>
+  </article>
 </section>
