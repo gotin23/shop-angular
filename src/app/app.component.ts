@@ -7,7 +7,6 @@ import { FinalPageComponent } from './final-page/final-page.component';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
   imports: [RouterOutlet, HomePageComponent, FinalPageComponent],
 })
 export class AppComponent {
